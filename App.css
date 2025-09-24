@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body.main-page {
+  background: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  width: 95%;
+  max-width: 1200px;
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.headline {
+  font-size: 28px;
+  color: #333;
+}
+.header-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Bill Details */
+.user-input {
+  margin-bottom: 25px;
+}
+.user-input h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.user-input-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 15px;
+}
+.input label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+.input input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Product Section */
+.product-details h2 {
+  margin-bottom: 10px;
+}
+.product-input {
+  margin-bottom: 20px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.product-grid label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+.product-grid input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.add-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.add-btn:hover {
+  background: #45a049;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #fff;
+}
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+.table th {
+  background: #4CAF50;
+  color: white;
+}
+.table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #e74c3c;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+.pdf-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+.pdf-btn:hover {
+  background: #2980b9;
+}
+
+/* Bill Info Section Above Table */
+.bill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.shop-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.bill-info p {
+  margin: 3px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.right-info {
+  text-align: right;
+}
+
+.save-btn{
+  height: 33px;
+  margin-top: 20px;
+  width: 60px;
+  
+}
+
+/* Ensure bill info prints nicely */
+@media print {
+  .bill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+  }
+
+  .shop-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .bill-info p {
+    font-size: 14px;
+    color: #000;
+  }
+
+  .pdf-btn, .delete-btn {
+    display: none; /* Hide buttons in print/PDF */
+  }
+}
+
+
+@media print {
+  .delete-btn, 
+  .pdf-btn {
+    display: none !important; /* Hide buttons only in PDF */
+  }
+}
+
+
+/* Shop Name Styling */
+.shop-name {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Owner & Customer Info Layout */
+.bill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 8px;
+}
+
+.bill-info .left-info {
+  text-align: left;
+}
+
+.bill-info .right-info {
+  text-align: right;
+}
+
+/* Hide Action column only in PDF/print */
+@media print {
+  th:last-child,
+  td:last-child {
+    display: none;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

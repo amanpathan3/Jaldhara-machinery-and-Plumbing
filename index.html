@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Generator</title>
+  <link rel="stylesheet" href="App.css">
+</head>
+<body class="main-page">
+  <div class="main-container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="headline">Shop Bill Manager</h1>
+      <p class="header-text">Create, manage, and print shop bills</p>
+    </header>
+
+    <main class="main-bill-content">
+      <!-- Bill Details -->
+      <section class="user-input">
+        <h2>Bill Details</h2>
+        <div class="user-input-main">
+          <div class="input">
+            <label  for="ownerName">Owner Name</label>
+            <input required class="owner-name-input" id="ownerName" type="text" placeholder="e.g, Jahir">
+          </div>
+          <div class="input">
+            <label for="contactNumber">Contact Number</label>
+            <input class="contact-number-input" id="contactNumber" type="text" placeholder="e.g, 1234567890">
+          </div>
+          <div class="input">
+            <label for="address">Address</label>
+            <input class="shop-address" id="address" type="text" placeholder="e.g, Dhamanagon">
+          </div>
+          <div class="input">
+            <label for="customerName">Customer Name</label>
+            <input class="customer-name" id="customerName" type="text" placeholder="e.g, Aman">
+          </div>
+          <button type="button" class="add-btn save-btn" onclick="
+          getUserInput();
+          ">Save</button>
+
+        </div>
+      </section>
+
+      <!-- Product Input -->
+      <section class="product-details">
+        <h2>Add Products</h2>
+        <form class="product-input">
+          <div class="product-grid">
+            <div>
+              <label for="productName">Product Name</label>
+              <select class="product-name js-p-name" id="productName" type="text" placeholder="e.g, Pipe">
+                <!-- generate by js -->
+              </select>
+            </div>
+            <div>
+              <label for="productSize">Product Size</label>
+              <select class="product-size js-p-size" id="productSize" type="text" placeholder="e.g, 1/2' ">
+                <!-- generate by js -->
+              </select>
+            </div>
+            <div>
+              <label for="price">Price</label>
+              <input class="product-price" id="price" type="number" placeholder="e.g, 250">
+            </div>
+            <div>
+              <label for="discount">Discount (%)</label>
+              <input class="product-discount" id="discount" type="number" placeholder="e.g, 20">
+            </div>
+            <div>
+              <label for="gst">GST (%)</label>
+              <input class="product-gst" id="gst" type="number" placeholder="e.g, 5">
+            </div>
+            <div>
+              <label for="quantity">Quantity</label>
+              <input class="product-quantity"  id="quantity" type="number" placeholder="e.g, 1">
+            </div>
+            <button type="button" class="add-btn js-add-btn" onclick="
+            addProducts();
+            ">+ Add Product</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Product Table -->
+      <section id="bill-section" class="product-details-table">
+        <h3 class="shop-name">Jaldhara Supplier</h3>
+        <div class="bill-info js-owner-details">
+            
+        </div>
+        <h2>Product List</h2>
+
+        <!-- Shop & Bill Info -->
+
+        <div>
+            <table class="table">
+            <thead>
+                <tr>
+                <th>Sr.No</th>
+                <th>Product Name</th>
+                <th>Product Size</th>
+                <th>Rate</th>
+                <th>Discount %</th>
+                <th>GST %</th>
+                <th>Quantity</th>
+                <th>Final Price</th>
+                <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+               
+            </tbody>
+            </table>
+        </div>
+
+        <div>
+            <button type="button" class="pdf-btn" onclick="
+              generatePDF();  
+            ">Generate Pdf</button>
+        </div>
+    </section>
+
+    </main>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <script src="App.js"></script>
+  <script src="ProductOption.js"></script>
+</body>
+</html>
