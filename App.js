@@ -1,17 +1,17 @@
 
 function getUserInput(){
-    let ownerName=document.querySelector('.owner-name-input').value;
+    // let ownerName=document.querySelector('.owner-name-input').value;
     
-    let ownerContactNum=document.querySelector('.contact-number-input').value;
+    // let ownerContactNum=document.querySelector('.contact-number-input').value;
    
-    let shopAddress=document.querySelector('.shop-address').value;
+    // let shopAddress=document.querySelector('.shop-address').value;
     
     let customerName=document.querySelector('.customer-name').value;
 
     let details=` <div class="left-info">
-    <p><b>Owner:</b>${ownerName}</p>
-    <p><b>Mobile:</b> ${ownerContactNum}</p>
-    <p><b>Address:</b> ${shopAddress}</p>
+    <p><b>Owner Name:</b>Zahir Sayyad</p>
+    <p><b>Mobile No:</b>9637847576</p>
+    <p><b>Address:</b>Dhamanagaon</p>
     </div>
     <div class="right-info">
     <p><b>Customer Name:</b> ${customerName}</p>
@@ -20,6 +20,15 @@ function getUserInput(){
 
     let shopDetails=document.querySelector('.js-owner-details');
     shopDetails.innerHTML=details;
+
+    //  document.querySelector('.owner-name-input').value="";
+    
+    // document.querySelector('.contact-number-input').value="";
+   
+    // document.querySelector('.shop-address').value="";
+    
+    document.querySelector('.customer-name').value="";
+
 }
 
 
@@ -59,7 +68,7 @@ function displayProduct(){
 
     let totalRow =`
         <tr>
-            <td colspan="6"></td>
+            <td colspan="7"></td>
             <td><b>Total Price:${totalPrice.toFixed(2)}</b></td>
             <td></td>
         </tr>
@@ -79,29 +88,38 @@ let products=[];
 
 function addProducts() {
     let productName = document.querySelector('.product-name').value;
+
+    productName = productName.replace(/&quot;/g, '"');
+
     let productSize = document.querySelector('.product-size').value;
-    let productPrice = document.querySelector('.product-price').value;
+    // let productPrice = document.querySelector('.product-price').value;
     let productDiscount = document.querySelector('.product-discount').value;
     let productGST = document.querySelector('.product-gst').value;
     let productQuantity = document.querySelector('.product-quantity').value;
-
-    products.push({
-        pName:productName,
-        pSize:productSize,
-        pPrice:Number(productPrice),
-        pDiscount:Number(productDiscount),
-        pGST:Number(productGST),
-        pQuantity:Number(productQuantity)
-    });
-
+    
+    let productPrice= getProductPrice(productName, productSize);
+    if(productPrice == 0){
+        alert("For this size no product found... please select again");
+    }
+    else{
+        products.push({
+            pName:productName,
+            pSize:productSize,
+            pPrice:Number(productPrice),
+            pDiscount:Number(productDiscount),
+            pGST:Number(productGST),
+            pQuantity:Number(productQuantity)
+        });
+        displayProduct();
+    }
     document.getElementById('productName').value="";
     document.getElementById('productSize').value="";
-    document.getElementById('price').value="";
+    // document.getElementById('price').value="";
     document.getElementById('discount').value="";
     document.getElementById('gst').value="";
     document.getElementById('quantity').value="";
 
-    displayProduct();
+    
 }
 
 
@@ -116,7 +134,6 @@ function generatePDF() {
 
     let options = {
         margin: 10,
-        filename: customerName + '-Bill.pdf',
         image: { type: 'jpeg', quality: 1 },
         html2canvas: { 
             scale: 3,
@@ -157,5 +174,37 @@ function generatePDF() {
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
-    html2pdf().from(element).set(options).save();
+    // ✅ set filename explicitly
+    html2pdf()
+        .set(options)
+        .from(element)
+        .save(customerName + '-Bill.pdf');
 }
+
+
+
+//Add New Products
+
+function addNewProducts(){
+    let newProductName=document.querySelector('.new-product-name-input').value;
+    let newProductSize=document.querySelector('.new-product-size-input').value;
+    let newProductRate=document.querySelector('.new-product-rate-input').value;
+
+    productPrices.push({
+        pName: newProductName, pSize: newProductSize, pPrice: Number(newProductRate)
+    });
+
+    productOptions.push(newProductName);
+
+    productSizeOptions.push(newProductSize);
+
+    displayOptions();
+    displaySizeOptions();
+
+    document.querySelector('.new-product-name-input').value = "";
+    document.querySelector('.new-product-size-input').value = "";
+    document.querySelector('.new-product-rate-input').value = "";
+
+}
+
+

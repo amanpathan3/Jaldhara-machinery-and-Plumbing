@@ -37,7 +37,7 @@ body.main-page {
 }
 
 /* Bill Details */
-.user-input {
+.user-input , .product-name, .product-size{
   margin-bottom: 25px;
 }
 .user-input h2 {
@@ -49,12 +49,12 @@ body.main-page {
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   gap: 15px;
 }
-.input label {
+.input label,.product-name, .product-size {
   font-size: 14px;
   margin-bottom: 5px;
   display: block;
 }
-.input input {
+.input input ,.product-name, .product-size{
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;

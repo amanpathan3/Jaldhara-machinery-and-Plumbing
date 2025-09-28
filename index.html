@@ -19,7 +19,7 @@
       <section class="user-input">
         <h2>Bill Details</h2>
         <div class="user-input-main">
-          <div class="input">
+          <!-- <div class="input">
             <label  for="ownerName">Owner Name</label>
             <input required class="owner-name-input" id="ownerName" type="text" placeholder="e.g, Jahir">
           </div>
@@ -28,9 +28,9 @@
             <input class="contact-number-input" id="contactNumber" type="text" placeholder="e.g, 1234567890">
           </div>
           <div class="input">
-            <label for="address">Address</label>
-            <input class="shop-address" id="address" type="text" placeholder="e.g, Dhamanagon">
-          </div>
+            <label for="address">Address</label> -->
+            <!-- <input class="shop-address" id="address" type="text" placeholder="e.g, Dhamanagon">
+          </div> -->
           <div class="input">
             <label for="customerName">Customer Name</label>
             <input class="customer-name" id="customerName" type="text" placeholder="e.g, Aman">
@@ -41,6 +41,31 @@
 
         </div>
       </section>
+
+
+       <section class="user-input">
+        <h2>Add New Products</h2>
+        <div class="user-input-main">
+          <div class="input">
+            <label  for="new-product-name">New Product Name</label>
+            <input required class="new-product-name-input" id="product-name" type="text" placeholder="e.g, Pipe">
+          </div>
+          <div class="input">
+            <label for="new-product-size">New Product Size</label>
+            <input class="new-product-size-input" id="product-size" type="text" placeholder="e.g, 1/2''">
+          </div>
+          <div class="input">
+            <label for="product-rate">New Product Rate</label>
+            <input class="new-product-rate-input" id="product-rate" type="text" placeholder="e.g, 250">
+          </div>
+          <button type="button" class="add-btn save-btn" onclick="
+            addNewProducts();
+          ">Save</button>
+
+        </div>
+      </section>
+
+
 
       <!-- Product Input -->
       <section class="product-details">
@@ -59,10 +84,10 @@
                 <!-- generate by js -->
               </select>
             </div>
-            <div>
+            <!-- <div>
               <label for="price">Price</label>
               <input class="product-price" id="price" type="number" placeholder="e.g, 250">
-            </div>
+            </div> -->
             <div>
               <label for="discount">Discount (%)</label>
               <input class="product-discount" id="discount" type="number" placeholder="e.g, 20">
@@ -84,7 +109,7 @@
 
       <!-- Product Table -->
       <section id="bill-section" class="product-details-table">
-        <h3 class="shop-name">Jaldhara Supplier</h3>
+        <h3 class="shop-name">Jaldhara Machinery And Plumbing Material</h3>
         <div class="bill-info js-owner-details">
             
         </div>
@@ -123,9 +148,9 @@
     </main>
   </div>
 
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-  <script src="App.js"></script>
   <script src="ProductOption.js"></script>
+  <script src="productPrice.js"></script>
+  <script src="App.js"></script>
 </body>
 </html>
