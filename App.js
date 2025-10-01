@@ -58,7 +58,7 @@ function displayProduct(){
             <td>${product.pQuantity}</td>
             <td>${finalPrice.toFixed(2)}</td>
             <td><button type="button" class="delete-btn js-delete-btn" onclick="
-                deleteProduct();
+                deleteProduct(${index});
             ">Delete ${index}</button></td>
         </tr>
         `;
@@ -94,7 +94,7 @@ function addProducts() {
     let productSize = document.querySelector('.product-size').value;
     // let productPrice = document.querySelector('.product-price').value;
     let productDiscount = document.querySelector('.product-discount').value;
-    let productGST = document.querySelector('.product-gst').value;
+    let productGST =18;
     let productQuantity = document.querySelector('.product-quantity').value;
     
     let productPrice= getProductPrice(productName, productSize);
@@ -116,7 +116,7 @@ function addProducts() {
     document.getElementById('productSize').value="";
     // document.getElementById('price').value="";
     document.getElementById('discount').value="";
-    document.getElementById('gst').value="";
+    // document.getElementById('gst').value="";
     document.getElementById('quantity').value="";
 
     

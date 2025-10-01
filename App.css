@@ -86,7 +86,9 @@ body.main-page {
   border-radius: 6px;
 }
 .add-btn {
-  padding: 8px 15px;
+ margin-top: 18px; 
+ width: 120px;
+ height: 36px;
   border: none;
   border-radius: 8px;
   background: #4CAF50;
@@ -249,5 +251,72 @@ body.main-page {
 
   .no-print {
     display: none !important;
+  }
+}
+
+
+
+/* ----------------------------- */
+/*   RESPONSIVE DESIGN RULES     */
+/* ----------------------------- */
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 15px;
+  }
+
+  .headline {
+    font-size: 22px;
+  }
+
+  .header-text {
+    font-size: 12px;
+  }
+
+  .bill-info {
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+  }
+
+  .right-info {
+    text-align: left;
+  }
+
+  .user-input-main,
+  .product-grid {
+    grid-template-columns: 1fr; /* stack inputs on mobile */
+  }
+
+  .table th, .table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  /* Make table scrollable horizontally */
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .pdf-btn, .add-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headline {
+    font-size: 18px;
+  }
+
+  .shop-name {
+    font-size: 18px;
+  }
+
+  .pdf-btn, .add-btn, .delete-btn {
+    font-size: 14px;
+    padding: 8px;
   }
 }
