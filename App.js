@@ -94,9 +94,10 @@ function addProducts() {
     let productSize = document.querySelector('.product-size').value;
     // let productPrice = document.querySelector('.product-price').value;
     let productDiscount = document.querySelector('.product-discount').value;
-    let productGST =18;
+   
     let productQuantity = document.querySelector('.product-quantity').value;
     
+    let productGST = getGst(productName , productSize);
     let productPrice= getProductPrice(productName, productSize);
     if(productPrice == 0){
         alert("For this size no product found... please select again");
@@ -189,9 +190,10 @@ function addNewProducts(){
     let newProductName=document.querySelector('.new-product-name-input').value;
     let newProductSize=document.querySelector('.new-product-size-input').value;
     let newProductRate=document.querySelector('.new-product-rate-input').value;
+    let newProductGst=document.querySelector('.new-product-gst-input').value;
 
     productPrices.push({
-        pName: newProductName, pSize: newProductSize, pPrice: Number(newProductRate)
+        pName: newProductName, pSize: newProductSize, pPrice: Number(newProductRate), pGst : Number(newProductGst)
     });
 
     productOptions.push(newProductName);
@@ -204,6 +206,7 @@ function addNewProducts(){
     document.querySelector('.new-product-name-input').value = "";
     document.querySelector('.new-product-size-input').value = "";
     document.querySelector('.new-product-rate-input').value = "";
+    document.querySelector('.new-product-gst-input').value = "";
 
 }
 
