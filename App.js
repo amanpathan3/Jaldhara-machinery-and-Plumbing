@@ -47,14 +47,15 @@ function displayProduct(){
 
         totalPrice += finalPrice;
 
+        // <td>${product.pDiscount}</td>
+        // <td>${product.pGST}</td>
         let row = `
          <tr>
             <td>${index + 1}</td>
             <td>${product.pName}</td>
             <td>${product.pSize}</td>
             <td>${product.pPrice}</td>
-            <td>${product.pDiscount}</td>
-            <td>${product.pGST}</td>
+            
             <td>${product.pQuantity}</td>
             <td>${finalPrice.toFixed(2)}</td>
             <td><button type="button" class="delete-btn js-delete-btn" onclick="
@@ -68,7 +69,7 @@ function displayProduct(){
 
     let totalRow =`
         <tr>
-            <td colspan="7"></td>
+            <td colspan="5"></td>
             <td><b>Total Price:${totalPrice.toFixed(2)}</b></td>
             <td></td>
         </tr>
