@@ -113,18 +113,22 @@ let productPrices = [
   { pName: "Pipe CPVC", pSize: '3/4"', pPrice: 376.50, pGst: 18 },
   { pName: "Pipe CPVC", pSize: '1"', pPrice: 597.00, pGst: 18 },
   { pName: "Pipe CPVC", pSize: '1 1/4"', pPrice: 918.00, pGst: 18 },
+  { pName: "Pipe CPVC", pSize: '1 1/2"', pPrice: 1257.00, pGst: 18 },
 
   { pName: "Socket CPVC", pSize: '3/4"', pPrice: 16.50, pGst: 18 },
   { pName: "Socket CPVC", pSize: '1"', pPrice: 27.50, pGst: 18 },
   { pName: "Socket CPVC", pSize: '1 1/4"', pPrice: 55.50, pGst: 18 },
+  { pName: "Socket CPVC", pSize: '1 1/2"', pPrice: 100.00, pGst: 18 },
 
   { pName: "Elbow CPVC", pSize: '3/4"', pPrice: 19.50, pGst: 18 },
   { pName: "Elbow CPVC", pSize: '1"', pPrice: 41.10, pGst: 18 },
   { pName: "Elbow CPVC", pSize: '1 1/4"', pPrice: 89.00, pGst: 18 },
+  { pName: "Elbow CPVC", pSize: '1 1/2"', pPrice: 166.50, pGst: 18 },
 
   { pName: "Shoe Bend CPVC", pSize: '3/4"', pPrice: 29.00, pGst: 18 },
   { pName: "Shoe Bend CPVC", pSize: '1"', pPrice: 50.00, pGst: 18 },
   { pName: "Shoe Bend CPVC", pSize: '1 1/4"', pPrice: 104.00, pGst: 18 },
+  { pName: "Shoe Bend CPVC", pSize: '1 1/2"', pPrice: 157.00, pGst: 18 },
 
   { pName: '3/4 X1/2 BR Elbo CPVC', pSize: '3/4"', pPrice: 75.50, pGst: 18 },
 
@@ -135,36 +139,43 @@ let productPrices = [
   { pName: "Tee CPVC", pSize: '3/4"', pPrice: 33.00, pGst: 18 },
   { pName: "Tee CPVC", pSize: '1"', pPrice: 51.00, pGst: 18 },
   { pName: "Tee CPVC", pSize: '1 1/4"', pPrice: 112.00, pGst: 18 },
+  { pName: "Tee CPVC", pSize: '1 1/2"', pPrice: 202.50, pGst: 18 },
 
   { pName: '3/4 X1/2 BR Tee CPVC', pSize: '3/4"', pPrice: 94.00, pGst: 18 },
 
   { pName: "End Cap CPVC", pSize: '3/4"', pPrice: 14.50, pGst: 18 },
   { pName: "End Cap CPVC", pSize: '1"', pPrice: 23.00, pGst: 18 },
   { pName: "End Cap CPVC", pSize: '1 1/4"', pPrice: 45.50, pGst: 18 },
+  { pName: "End Cap CPVC", pSize: '1 1/2"', pPrice: 66.50, pGst: 18 },
 
   { pName: "MTA CPVC", pSize: '3/4"', pPrice: 24.00, pGst: 18 },
   { pName: "MTA CPVC", pSize: '1"', pPrice: 35.00, pGst: 18 },
   { pName: "MTA CPVC", pSize: '1 1/4"', pPrice: 59.00, pGst: 18 },
+  { pName: "MTA CPVC", pSize: '1 1/2"', pPrice: 86.50, pGst: 18 },
 
   { pName: '3/4 X1/2 BR MTA CPVC', pSize: '3/4"', pPrice: 133.00, pGst: 18 },
 
   { pName: "FTA CPVC", pSize: '3/4"', pPrice: 30.50, pGst: 18 },
   { pName: "FTA CPVC", pSize: '1"', pPrice: 45.50, pGst: 18 },
   { pName: "FTA CPVC", pSize: '1 1/4"', pPrice: 108.00, pGst: 18 },
+  { pName: "FTA CPVC", pSize: '1 1/2"', pPrice: 150.50, pGst: 18 },
 
   { pName: '3/4 X1/2 BR FTA CPVC', pSize: '3/4"', pPrice: 95.00, pGst: 18 },
 
   { pName: "Union CPVC", pSize: '3/4"', pPrice: 90.50, pGst: 18 },
   { pName: "Union CPVC", pSize: '1"', pPrice: 114.50, pGst: 18 },
   { pName: "Union CPVC", pSize: '1 1/4"', pPrice: 175.50, pGst: 18 },
+  { pName: "Union CPVC", pSize: '1 1/2"', pPrice: 291.00, pGst: 18 },
 
   { pName: "Tank Neppele CPVC", pSize: '3/4"', pPrice: 67.50, pGst: 18 },
   { pName: "Tank Neppele CPVC", pSize: '1"', pPrice: 101.00, pGst: 18 },
   { pName: "Tank Neppele CPVC", pSize: '1 1/4"', pPrice: 150.50, pGst: 18 },
+  { pName: "Tank Neppele CPVC", pSize: '1 1/2"', pPrice: 220.50, pGst: 18 },
 
   { pName: "Ball Wall CPVC", pSize: '3/4"', pPrice: 171.00, pGst: 18 },
   { pName: "Ball Wall CPVC", pSize: '1"', pPrice: 320.00, pGst: 18 },
   { pName: "Ball Wall CPVC", pSize: '1 1/4"', pPrice: 563.00, pGst: 18 },
+  { pName: "Ball Wall CPVC", pSize: '1 1/2"', pPrice: 884.00, pGst: 18 },
 
   { pName: "R Tee CPVC", pSize: '1"', pPrice: 87.50, pGst: 18 },
   { pName: "R Tee CPVC", pSize: '1 1/4"', pPrice: 130.50, pGst: 18 },
@@ -179,7 +190,26 @@ let productPrices = [
   { pName: "Clip CPVC", pSize: '1"', pPrice: 10.00, pGst: 18 },
   { pName: "Clip CPVC", pSize: '1 1/4"', pPrice: 15.00, pGst: 18 },
 
-  { pName: "Brass MTA CPVC", pSize: '3/4"', pPrice: 0.00, pGst: 18 },
+  { pName: "Brass MTA CPVC", pSize: '1 1/2"', pPrice: 839.50, pGst: 18 },
+  { pName: "Brass FTA CPVC", pSize: '1 1/2"', pPrice: 740.50, pGst: 18 },
+
+  { pName: "Step Over CPVC", pSize: '1 1/2"', pPrice: 294.00, pGst: 18 },
+
+  { pName: "1 1/2 X 1 Tee CPVC", pSize: 'None', pPrice: 218.00, pGst: 18 },
+  { pName: "1 1/2 X 3/4 Tee CPVC", pSize: 'None', pPrice: 215.50, pGst: 18 },
+  { pName: "1 1/2 X 1 1/4 Tee CPVC", pSize: 'None', pPrice: 210.50, pGst: 18 },
+
+  { pName: "1 1/2 X 1 Reducer CPVC", pSize: 'None', pPrice: 108.00, pGst: 18 },
+  { pName: "1 1/2 X 3/4 Reducer CPVC", pSize: 'None', pPrice: 118.50, pGst: 18 },
+  { pName: "1 1/2 X 1 1/4 Reducer CPVC", pSize: 'None', pPrice: 104.00, pGst: 18 },
+  
+  { pName: "1 1/2 X 1 Bush CPVC", pSize: 'None', pPrice: 59.00, pGst: 18 },
+  { pName: "1 1/2 X 3/4 Bush CPVC", pSize: 'None', pPrice: 60.00, pGst: 18 },
+  { pName: "1 1/2 X 1 1/4 Bush CPVC", pSize: 'None', pPrice: 42.50, pGst: 18 },
+  
+   
+
+
 
   // ---------------- SWR ----------------
  { pName: "Pipe SWR", pSize: '2 1/2"', pPrice: 658.50, pGst: 18 },
