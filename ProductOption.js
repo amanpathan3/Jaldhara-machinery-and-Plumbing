@@ -46,6 +46,17 @@ let productOptions = [
     'Bush CPVC',
     'Clip CPVC',
     'Brass MTA CPVC',
+    'Brass FTA CPVC',
+    'Step Over CPVC',
+    '1 1/2 X 1 Tee CPVC',
+    '1 1/2 X 3/4 Tee CPVC',
+    '1 1/2 X 1 1/4 Tee CPVC',
+    '1 1/2 X 1 Reducer CPVC',
+    '1 1/2 X 3/4 Reducer CPVC',
+    '1 1/2 X 1 1/4 Reducer CPVC',
+    '1 1/2 X 1 Bush CPVC',
+    '1 1/2 X 3/4 Bush CPVC',
+    '1 1/2 X 1 1/4 Bush CPVC',
 
    // SWR
     'Pipe SWR',
