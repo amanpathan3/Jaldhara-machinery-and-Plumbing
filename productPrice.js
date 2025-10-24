@@ -255,3 +255,22 @@ function getGst(productName, productSize) {
     
     return productGst;
 }
+
+
+function viewProducts(){
+    const tBody = document.querySelector(".product-table-body");
+    let tableProducts = "";
+     productPrices.forEach((p) => {
+        let sr=0;
+        tableProducts += `<tr>
+                 <td>${sr++}</td>
+                 <td>${p.pName}</td>
+                 <td>${p.pSize}</td>
+                 <td>${p.pGst}</td>
+                 <td>${p.pPrice}</td>
+               </tr>`;
+     })
+    
+     tBody.innerHTML = tableProducts;
+     console.log(tableProducts);
+}

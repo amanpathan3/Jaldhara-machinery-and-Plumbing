@@ -35,6 +35,22 @@ body.main-page {
   font-size: 14px;
   color: #555;
 }
+/* View Products btn */
+.view-product-btn {
+  margin-top: 18px;
+  margin-bottom: 18px; 
+  width: 160px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: #F44336;;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.view-product-btn:hover {
+  background: #D32F2F;
+}
 
 /* Bill Details */
 .user-input , .product-name, .product-size{

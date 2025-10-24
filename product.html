@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .shop-name {
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        }
+        .product-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        background: #fff;
+        }
+        .product-table th, .product-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+        }
+        .product-table th {
+        background: #e74c3c;
+        color: white;
+        }
+        .product-table tr:nth-child(even) {
+        background: #f9f9f9;
+        }
+        .product-details-table{
+            padding: 25px;
+        }
+    </style>
+    <title>Mauli Hardware and Plumbing Products</title>
+</head>
+<body>
+   <section id="bill-section" class="product-details-table">
+        <h3 class="shop-name">Mauli Hardware and Plumbing</h3>
+        <hr>
+        <h2>Product List</h2>
+
+        <!-- Shop & Bill Info -->
+
+        <div>
+            <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Product Name</th>
+                    <th>Product Size</th>
+                    <!-- <th>Discount %</th> -->
+                    <th>GST %</th>
+                    <th>Rate</th>
+                </tr>
+            </thead>
+            <tbody class="product-table-body">
+              
+            </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="productPrice.js"></script>
+    <script>
+        function viewProducts() {
+        const tBody = document.querySelector(".product-table-body");
+        if (!tBody) return console.error("product-table-body not found");
+
+        let tableProducts = "";
+        // use index for serial number
+        productPrices.forEach((p, idx) => {
+            tableProducts += `
+            <tr>
+                <td>${idx + 1}</td>
+                <td>${p.pName}</td>
+                <td>${p.pSize}</td>
+                <td>${p.pGst}</td>
+                <td>${p.pPrice}</td>
+            </tr>`;
+        });
+
+        tBody.innerHTML = tableProducts;
+        console.log("Rendered rows:", productPrices.length);
+        }
+
+        // Run after DOM loads
+        window.addEventListener("DOMContentLoaded", viewProducts);
+    </script>
+</body>
+</html>
