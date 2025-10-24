@@ -43,13 +43,13 @@ body.main-page {
   height: 36px;
   border: none;
   border-radius: 8px;
-  background: #F44336;;
+  background: #4CAF50;
   color: white;
   cursor: pointer;
   transition: 0.3s;
 }
 .view-product-btn:hover {
-  background: #D32F2F;
+  background: #45a049;
 }
 
 /* Bill Details */
